@@ -9,6 +9,6 @@
      <nav> 
        <p>Ceci sera le menu !!!! test git </p>
        <a href="./index.php?action=accueil">Accueil</a>
-       <a href="./index.php?action=chercher">chercher</a>
-       <a href="./index.php?action=contact">contact</a>
+       <a href="./index.php?action=chercher">Rechercher</a>
+       <a href="./index.php?action=contact">Contact test</a>
       </nav>
