@@ -8,17 +8,13 @@
     <title>Romans</title>
 </head>
   <body>
-    <header>
-        <h1>BIBLIOSIO</h1>
-        <nav>
-            <ul>
-                <li><h1><a href="../vue/vueAccueil.php">Accueil</a></h1></li>
-                <li><h1><a href="Romans.html">Romans</a></h1></li>
-                <li><h1><a href="Science-Fiction.html">Science-Fiction</a></h1></li>
-                <li><h1><a href="Documentaires.html">Documentaires</a></h1></li>
-                <li><h1><a href="BD.html">BD</a></h1></li>
-                <li><h1><a href="Manga.html">Manga</a></h1></li>
-                <li><h1><a href="Contact.html">Contact</a></h1></li>
-            </ul>
-        </nav>
-    </header>   
+     <nav> 
+       <header>
+        <a href="./index.php?action=accueil">Accueil</a>
+        <a href="./index.php?action=chercher">Rechercher</a>
+        <a href="./index.php?action=contact">Contact</a>
+        <a href="./index.php?action=connexion">connex</a>
+        <a href="vue/vueConnexion.php">connexion</a>
+       </header>
+      </nav>
+
