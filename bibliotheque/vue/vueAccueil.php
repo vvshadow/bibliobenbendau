@@ -1,2 +1,7 @@
-<h1>Accueil</h1>
-<p> Ceci est l'accueil</p>
+<?php
+include("../inc/header.inc");
+?>
+        <h2>Voici la liste des livres disponibles :</h2>
+    </body>
+
+</html>
