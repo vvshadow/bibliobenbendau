@@ -3,24 +3,24 @@
     <!-- Tabs Titles -->
     
     
-    <h2 class="inactive underlineHover">Sign Up </h2>
+    <h2 class="inactive underlineHover">Connexion</h2>
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="" id="icon" alt="User Icon" />
+      <img src="../../Capture.PNG" id="icon" alt="icon" />
     </div>
 
-    <!-- Login Form -->
+    <!-- formulaire de connexion -->
     <form method="">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
+      <input type="text" id="login" class="fadeIn second" name="mail" placeholder="E-mail"><br>
+      <input type="text" id="password" class="fadeIn third" name="mdp" placeholder="Mot de passe"><br>
+      <input type="submit" class="fadeIn fourth" value="Connexion">
     </form>
 
-    <!-- Remind Passowrd -->
+    <!-- recup mdp
     <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
-    </div>
+      <a class="underlineHover" href="#">mot de passe oublié</a>
+    </div>-->
 
   </div>
 </div>
