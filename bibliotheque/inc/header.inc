@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <title>Romans</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>BIBLISIO</title>
 </head>
   <body>
      <header>
@@ -16,7 +16,6 @@
                 <li><h1><a href="./index.php?action=chercher">Rechercher</a></h1>
                 <li><h1><a href="./index.php?action=contact">Contact</a></h1>
                 <li><h1><a href="./index.php?action=connexion">Connexion</a></h1>
-                
             </ul>
       </nav>
     </header>
