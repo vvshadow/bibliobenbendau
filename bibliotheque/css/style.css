@@ -319,3 +319,12 @@ width:60%;
 * {
 box-sizing: border-box;
 }
+footer {
+    background-color: #02ADE3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
