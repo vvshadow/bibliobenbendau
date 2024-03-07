@@ -8,7 +8,7 @@ $bdd = new PDO("mysql:host=127.0.0.1;dbname=dblogin4544",'root','');
 // Partie de traitement des données récupérées si besoin pour mise à disposition de la vue
 if(isset($_POST['formconnect'])) {
     $mailco = htmlspecialchars($_POST['mailco']);
-    $mdpco = sha256($_POST['mdpco']);
+    $mdpco =    sha1($_POST['mdpco']);
 }
 if(isset($_POST['formconnect'])){
     if(!empty($_POST["mailco"]) AND !empty($_POST["mdpco"]))
@@ -32,7 +32,11 @@ if(isset($_POST['formconnect'])){
     }
 }
 
- 
+if(isset($erreur))
+{
+    echo '<font color="red">' .$erreur."</font>";
+}
+
 
 // appel du script de vue qui permet de gerer l'affichage des donnees
 include "vue/vueConnexion.php";

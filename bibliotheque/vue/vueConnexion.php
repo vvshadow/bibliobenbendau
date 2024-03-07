@@ -14,7 +14,7 @@
     <form method="POST">
       <input type="text" id="login" class="fadeIn second" name="mailco" placeholder="E-mail"><br>
       <input type="text" id="password" class="fadeIn third" name="mdpco" placeholder="Mot de passe"><br>
-      <input type="submit" class="fadeIn fourth" value="Connexion">
+      <input type="submit" name="formconnect" class="fadeIn fourth" value="Connexion">
     </form>
 
     <!-- recup mdp

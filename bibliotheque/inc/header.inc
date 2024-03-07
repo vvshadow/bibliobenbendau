@@ -9,9 +9,10 @@
 </head>
   <body>
      <header>
-     <h1>BIBLISIO</h1>
+    
         <nav>
             <ul>
+                <li><h1><a href="#"><img src="../img/logo.png" width="50px" height="50px"></a></h1>
                 <li><h1><a href="./index.php?action=accueil">Accueil</a></h1>
                 <li><h1><a href="./index.php?action=chercher">Rechercher</a></h1>
                 <li><h1><a href="./index.php?action=contact">Contact</a></h1>
