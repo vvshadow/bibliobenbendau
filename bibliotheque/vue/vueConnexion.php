@@ -7,13 +7,13 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="../../Capture.PNG" id="icon" alt="icon" />
+      <img src="../img/logo.png" id="icon" alt="icon" />
     </div>
 
     <!-- formulaire de connexion -->
-    <form method="">
-      <input type="text" id="login" class="fadeIn second" name="mail" placeholder="E-mail"><br>
-      <input type="text" id="password" class="fadeIn third" name="mdp" placeholder="Mot de passe"><br>
+    <form method="POST">
+      <input type="text" id="login" class="fadeIn second" name="mailco" placeholder="E-mail"><br>
+      <input type="text" id="password" class="fadeIn third" name="mdpco" placeholder="Mot de passe"><br>
       <input type="submit" class="fadeIn fourth" value="Connexion">
     </form>
 
