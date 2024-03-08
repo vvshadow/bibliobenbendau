@@ -7,7 +7,7 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="../img/logo.png" id="icon" alt="icon" />
+      <img src="img/logo.png" id="icon" alt="icon" />
     </div>
 
     <!-- formulaire de connexion -->

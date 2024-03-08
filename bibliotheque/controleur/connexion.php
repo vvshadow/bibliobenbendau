@@ -2,7 +2,9 @@
 
 //  Partie d'appel au modèle si besoin
 session_start();
-$bdd = new PDO("mysql:host=127.0.0.1;dbname=dblogin4544",'root','');
+include 'includes/db.php';
+
+
 
 
 // Partie de traitement des données récupérées si besoin pour mise à disposition de la vue

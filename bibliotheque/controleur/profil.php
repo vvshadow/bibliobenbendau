@@ -1,6 +1,8 @@
 <?php
 
 //  Partie d'appel au modèle si besoin 
+session_start();
+include 'includes/db.php';
 
 
 // Partie de traitement des données récupérées si besoin pour mise à disposition de la vue
