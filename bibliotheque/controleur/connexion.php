@@ -4,7 +4,7 @@
 session_start();
 include 'includes/db.php';
 
-
+ 
 
 
 // Partie de traitement des données récupérées si besoin pour mise à disposition de la vue
@@ -25,7 +25,7 @@ if(isset($_POST['formconnect'])){
             $_SESSION['mdp'] = $userinfo['mdp'];
             $_SESSION['nom'] = $userinfo['nom'];
 
-            header("Location : /vue/vueProfil.php");
+            header("Location : vue/vueProfil.php");
         }else{
             $erreur = "Identifiants incorrect";
         }
