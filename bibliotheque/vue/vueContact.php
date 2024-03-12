@@ -2,7 +2,7 @@
 <p> Ceci est la page de contact</p>
 <form method="post" action="">
 <label name="mail">E-mail :</label>
-<input name="mail" type="mail" placeholder="E-mail"></input><br>
+<input name="mail" type="text" placeholder="E-mail"></input><br>
 <label name="nom">Nom :</label>
 <input name="nom" type="text" placeholder="Nom"></input><br>
 <label name="sujet">Sujet :</label>
