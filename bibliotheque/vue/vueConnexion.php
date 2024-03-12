@@ -1,6 +1,6 @@
 <div class="wrapper fadeInDown">
   <div id="formContent">
-    <!-- Tabs Titles -->
+ 
     
     
     <h2 class="inactive underlineHover">Connexion</h2>
