@@ -1,11 +1,11 @@
 <ul>
 			<li><a href="#">Home</a></li>
-			<li><a href="myobj.php">Mes O.B.J</a></li>
-			<li><a href="cree.php">Ajoutez Un O.B.J</a></li>
-			<li><a href="suggestion.php">Suggestion</a></li>
-            <li><a href="contact.php">Contact</a></li>
-            <li></li>
-		  </ul><br><br>
+			<li><a href="#">Mes O.B.J</a></li>
+			<li><a href="#">Ajoutez livre</a></li>
+			<li><a href="#">Suggestion</a></li>
+                        <li><a href="#">Contact</a></li>
+		  </ul>
+                  <br><br>
 <div align="center">
 
 

@@ -2,7 +2,7 @@
 
 //  Partie d'appel au modèle si besoin
 session_start();
-include 'includes/db.php';
+include 'modele/db.php';
 
  
 

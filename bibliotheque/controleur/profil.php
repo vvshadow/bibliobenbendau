@@ -2,7 +2,7 @@
 
 //  Partie d'appel au modèle si besoin 
 session_start();
-include 'includes/db.php';
+include 'modele/db.php';
 
 
 // Partie de traitement des données récupérées si besoin pour mise à disposition de la vue
@@ -14,7 +14,7 @@ if(isset($_SESSION['d']))
     $requser->execute(array($_SESSION['d']));
     $userinfo = $requser->fetch();
 } else {
-    header("location: /vue/vueAccueil.php");
+    header("location:./index.php?action=accueil");
 }
 
 
