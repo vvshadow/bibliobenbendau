@@ -3,7 +3,7 @@ function connexionBDD()
 {
     $bdd = 'mysql:host=10.23.216.21;dbname=bibliotheque';
     $user = 'bibliotheque';
-    $password = 'meSdEkETU2m5i';
+    $password = 'meSdEkETU2m5i!';
     try {
         $ObjConnexion = new PDO(
             $bdd,
