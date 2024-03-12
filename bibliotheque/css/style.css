@@ -2,7 +2,10 @@ body, h1, h3, ul, li {
     margin: 0;
     padding: 0;
 }
-
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -125,11 +128,13 @@ border-radius: 0 0 10px 10px;
 
 h2.inactive {
 color: #cccccc;
+cursor: pointer;
 }
 
 h2.active {
 color: #0d0d0d;
 border-bottom: 2px solid #5fbae9;
+cursor: pointer;
 }
 
 
@@ -328,8 +333,12 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+<<<<<<< HEAD
 }
 
 table{
 
+=======
+    
+>>>>>>> 75190e1a9109d4605c5ae3eb247afd48923fa62a
 }

@@ -14,7 +14,7 @@ if(isset($_SESSION['d']))
     $requser->execute(array($_SESSION['d']));
     $userinfo = $requser->fetch();
 } else {
-    header("location: index.php");
+    header("location: /vue/vueAccueil.php");
 }
 
 
