@@ -10,22 +10,22 @@ include 'modele/db.php';
 // Partie de traitement des données récupérées si besoin pour mise à disposition de la vue
 if(isset($_POST['formconnect'])) {
     $mailco = htmlspecialchars($_POST['mailco']);
-    $mdpco =    sha1($_POST['mdpco']);
-}
-if(isset($_POST['formconnect'])){
+    $mdpco =    $_POST['mdpco'];
+
     if(!empty($_POST["mailco"]) AND !empty($_POST["mdpco"]))
     {
-        $requser = $bdd->prepare("SELECT * FROM user WHERE mail = ? AND mdp = ?");
-        $requser->execute(array($mailco, $_POST["mdpco"]));
-        $userexist = $requser->rowCount();
-        if($userexist == 1){
-            $userinfo = $requser->fetch();
-            $_SESSION['d'] = $userinfo['d'];
-            $_SESSION['mail'] = $userinfo['mail'];
-            $_SESSION['mdp'] = $userinfo['mdp'];
-            $_SESSION['nom'] = $userinfo['nom'];
+        $requser = $bdd->prepare("SELECT * FROM user WHERE mail = ?");
+        $requser ->bindValue(1, $mailco, PDO::PARAM_STR);
+        $requser->execute();
+        $user = $requser->fetch();
+
+        if($user && password_verify($mdpco, $user['mdp'])){
+            $_SESSION['d'] = $user['d'];
+            $_SESSION['mail'] = $user['mail'];
+            $_SESSION['nom'] = $user['nom'];
 
             header("Location : vue/vueProfil.php");
+            exit();
         }else{
             $erreur = "Identifiants incorrect";
         }
