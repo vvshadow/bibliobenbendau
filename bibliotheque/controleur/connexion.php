@@ -24,7 +24,7 @@ if(isset($_POST['formconnect'])) {
             $_SESSION['mail'] = $user['mail'];
             $_SESSION['nom'] = $user['nom'];
 
-            header("Location : vue/vueProfil.php");
+            header("Location :./index.php?action=profil");
             exit();
         }else{
             $erreur = "Identifiants incorrect";
