@@ -12,7 +12,7 @@
     
         <nav>
             <ul>
-                <li><h1><a href="#"><img src="img/logo.png" width="130px" height="130px"></a></h1>
+                <li><h1><a href="#"><img src="img/logo.png" width="130px" height="130px style="border-radius="12px"></a></h1>
                 <li><h1><a href="./index.php?action=accueil">Accueil</a></h1>
                 <li><h1><a href="./index.php?action=chercher">Rechercher</a></h1>
                 <li><h1><a href="./index.php?action=contact">Contact</a></h1>
