@@ -25,5 +25,6 @@ $resultat = $connexion->query($sql);
 
 
 $connexion->close();
+include "/vue/vueChercher.php";
 
 ?>
