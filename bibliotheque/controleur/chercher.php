@@ -1,5 +1,5 @@
 <?php
-include "modele/db.php";
+include "modele/mesFonctionsAccesBDD.php";
 
 $serveur = 'localhost';
 $user  = 'bibliotheque';

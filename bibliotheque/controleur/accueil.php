@@ -6,7 +6,7 @@ $donneesLivres = $bdd->query($requiser);
 $selectLivre = $donneesLivres->fetch();
 
 //  Partie d'appel au modèle si besoin 
-include "includes/db.php";
+include "modele/mesFonctionsAccesBDD.php";
 
 // Partie de traitement des données récupérées si besoin pour mise à disposition de la vue
 

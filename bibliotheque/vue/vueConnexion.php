@@ -15,7 +15,7 @@
       <input type="text" id="login" class="fadeIn second" id="mailco" name="mailco" placeholder="E-mail"><br>
       <input type="text" id="password" class="fadeIn third" id="mdpco" name="mdpco" placeholder="Mot de passe"><br>
       <input type="submit" name="formconnect" class="fadeIn fourth" value="Connexion">
-    </form>
+    </form>      
 
     <!-- recup mdp
     <div id="formFooter">
