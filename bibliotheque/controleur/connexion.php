@@ -2,11 +2,9 @@
 
 //  Partie d'appel au modèle si besoin
 session_start();
-include 'modele/db.php';
+include 'mesFonctionsAccesBDD.php';
 
  
-
-
 // Partie de traitement des données récupérées si besoin pour mise à disposition de la vue
 if(isset($_POST['formconnect'])) {
     $mailco = htmlspecialchars($_POST['mailco']);
@@ -24,7 +22,7 @@ if(isset($_POST['formconnect'])) {
             $_SESSION['mail'] = $user['mail'];
             $_SESSION['nom'] = $user['nom'];
 
-            header("Location :./index.php?action=profil");
+            header("profil.php");
             exit();
         }else{
             $erreur = "Identifiants incorrect";
@@ -33,7 +31,6 @@ if(isset($_POST['formconnect'])) {
         $erreur = 'Les champs ne sont pas tous compléter';
     }
 }
-
 if(isset($erreur))
 {
     echo '<font color="red">' .$erreur."</font>";
