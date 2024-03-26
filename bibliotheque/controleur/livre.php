@@ -22,10 +22,10 @@ if($auteur) {
 } else {
     echo "<p>Auteur non disponible</p>";
 }
-} else {
+else {
 echo "<p>Livre non trouvé</p>";
 }
-} else {
+ else {
 echo "<p>Identifiant du livre non spécifié</p>";
 }
 

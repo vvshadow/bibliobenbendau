@@ -1,4 +1,4 @@
-<form action="recherche_livre.php" method="GET">
+<form action="vue/vueResultSc.php" method="GET">
        <label for="titre">Titre :</label>
        <input type="text" id="titre" name="titre"><br>
        
