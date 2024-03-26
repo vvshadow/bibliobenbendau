@@ -41,8 +41,12 @@ if(isset($_GET['titre']) && !empty($_GET['genre']) && !empty($_GET['sortie']) &&
 // $resultat = $connexion->query($sql);
 
 
+<<<<<<< HEAD
 
 $connexion->close();
 include "/vue/vueChercher.php";
+=======
+// $connexion->close();
+>>>>>>> 8716ac752f8ca17de476d30d8f4640af005c160d
 
 ?>
