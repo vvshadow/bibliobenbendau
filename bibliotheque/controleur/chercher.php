@@ -31,7 +31,7 @@ function recherche($bdd, $titre, $genre, $sortie, $auteur) {
     // Initialisation de la requête SQL
     $sql = "SELECT * FROM livre WHERE ";
 
-    // Construction de la clause WHERE en fonction des paramètres fournis
+
     $conditions = array();
     if (!empty($titre)) {
         $conditions[] = "titre LIKE '%$titre%'";
@@ -40,7 +40,7 @@ function recherche($bdd, $titre, $genre, $sortie, $auteur) {
         $conditions[] = "genre = '$genre'";
     }
     if (!empty($sortie)) {
-        // Conversion du format de date pour correspondre au format de la base de données
+        // format de la date 
         $sortie = date('Y-m-d', strtotime($sortie));
         $conditions[] = "annesortie = '$sortie'";
     }
@@ -48,17 +48,17 @@ function recherche($bdd, $titre, $genre, $sortie, $auteur) {
         $conditions[] = "auteur = '$auteur'";
     }
 
-    // Concaténation des conditions avec "AND"
+    // Ajout des conditions a la requete sql
     $sql .= implode(" AND ", $conditions);
 
     // Exécution de la requête SQL
     $resultats = $bdd->query($sql);
 
-    // Retourner les résultats
+
     return $resultats;
 }
 
-// Utilisation de la fonction recherche
+// Utilisation de la fonction recheche
 if (isset($_GET['titre']) && isset($_GET['genre']) && isset($_GET['sortie']) && isset($_GET['auteur'])) {
     $tit = htmlspecialchars($_GET['titre']);
     $genre = htmlspecialchars($_GET['genre']);
@@ -66,7 +66,6 @@ if (isset($_GET['titre']) && isset($_GET['genre']) && isset($_GET['sortie']) && 
     $auteur = htmlspecialchars($_GET['auteur']);
 
     $resultatsRecherche = recherche($bdd, $tit, $genre, $sortie, $auteur);
-    // Utilisez $resultatsRecherche pour traiter les résultats de la recherche
 };
 
 
