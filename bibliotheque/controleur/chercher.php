@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 function connexionBDD()
 {
     $bdd = 'mysql:host=10.23.216.21;dbname=bibliotheque';
@@ -18,9 +17,6 @@ function connexionBDD()
         echo $e->getMessage();
     }
     return $ObjConnexion;
-=======
-include "modele/mesFonctionsAccesBDD.php";
->>>>>>> b33cffaa7fd0aba35fbf4374f2071f0b4187ac72
 
 }
 $alldemande = $bdd->query("SELECT * FROM users ORDER BY id DESC");
@@ -45,11 +41,6 @@ if(isset($_GET['titre']) && !empty($_GET['genre']) && !empty($_GET['sortie']) &&
 // $resultat = $connexion->query($sql);
 
 
-<<<<<<< HEAD
 // $connexion->close();
-=======
-$connexion->close();
-include "/vue/vueChercher.php";
->>>>>>> b33cffaa7fd0aba35fbf4374f2071f0b4187ac72
 
 ?>
