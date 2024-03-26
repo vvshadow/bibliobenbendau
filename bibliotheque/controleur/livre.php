@@ -23,9 +23,18 @@ function connexionBDD()
 };
 
 
-$requete_detail_livre = $bdd->prepare('SELECT * From bibliotheque Where id_livre = :id');
-$requete_auteur = $bdd->prepare('SELECT * From auteur Where auteur  id_auteur = :id');
+$sql = "SELECT auteur, titre , resumee From livres Where id  = '1 '";
+$resultat = $conn->query($sql);
+if($resultat->num_rows > 0 ){
+    while($row = $resultat -> fetch_assoc()){
+        echo"<p>Auteur: " . $row["auteur"]. "</p>";
+        echo"<p>Titre :" .$row["titre"]. "</p>";
+        echo"<p>Resume :" .$row["resumee"] . "</p>";
+    }
+    
 
-echo $_SESSION[auteu]
-?>
+    }else {
+        echo "0 resusltat"
+    }
+}
 
