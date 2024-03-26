@@ -11,7 +11,7 @@
     </div>
 
     <!-- formulaire de connexion -->
-    <form method="POST" action="">
+    <form method="POST" action="vue/vueProfil.php">
       <input type="text" id="login" class="fadeIn second" id="mailco" name="mailco" placeholder="E-mail"><br>
       <input type="text" id="password" class="fadeIn third" id="mdpco" name="mdpco" placeholder="Mot de passe"><br>
       <input type="submit" name="formconnect" class="fadeIn fourth" value="Connexion">

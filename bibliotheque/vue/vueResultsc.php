@@ -1,5 +1,6 @@
 <section class="afficher_livre">
-<?php
+<?php 
+// Affichage des résultats de la recherche
 if (isset($resultatsRecherche) && $resultatsRecherche->rowCount() > 0) {
     echo "<h2>Résultats de la recherche :</h2>";
     echo "<ul>";

@@ -1,4 +1,4 @@
-<form action="vue/vueResultSc.php" method="GET">
+<form action="" method="GET">
        <label for="titre">Titre :</label>
        <input type="text" id="titre" name="titre"><br>
        
@@ -13,3 +13,4 @@
 
        <input type="submit" value="Rechercher">
 </form>
+
