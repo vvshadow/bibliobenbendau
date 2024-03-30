@@ -3,9 +3,9 @@ include "vue/vueAcceuil.php";
 
 function connexionBDD()
 {
-    $db = 'mysql:host=10.23.216.21;dbname=bibliotheque';
-    $user = 'bibliotheque';
-    $password = 'meSdEkETU2m5i}!';
+    $db = 'mysql:host=10.23.216.213;dbname=dblogin5260';
+    $user = 'login5260';
+    $password = 'rIgUUppFtMTdpFs';
     try {
         $ObjConnexion = new PDO(
             $db,
@@ -34,7 +34,7 @@ if($resultat->num_rows > 0 ){
     
 
     }else {
-        echo "0 resusltat"
+        echo "0 resusltat";
     }
-}
 
+?>
