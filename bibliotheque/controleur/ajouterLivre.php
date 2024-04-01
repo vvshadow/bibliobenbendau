@@ -1,6 +1,8 @@
 <?php
 include 'mesFonctionsAccesBDD.php';
+
 $bdd=connexionBDD();
+
 if(isset($_POST['ajouter'])) {
     $Titre = htmlspecialchars($_POST["Titre"]);
    $Auteur = htmlspecialchars($_POST["Auteur"]);

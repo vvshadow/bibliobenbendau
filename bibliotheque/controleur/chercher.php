@@ -26,7 +26,7 @@ function connexionBDD()
 //$s = recherche();
 
 
-
+/*
 function recherche($bdd, $titre, $genre, $sortie, $auteur) {
     // Initialisation de la requête SQL
     $sql = "SELECT * FROM livre WHERE ";
@@ -67,7 +67,28 @@ if (isset($_GET['titre']) && isset($_GET['genre']) && isset($_GET['sortie']) && 
 
     $resultatsRecherche = recherche($bdd, $tit, $genre, $sortie, $auteur);
 };
+*/
 
+$alldemande = $bdd->query("SELECT * FROM Livres WHERE 1=1");
+if(isset($_GET['titre'])){
+    $tit = htmlspecialchars($_GET['titre']);
+    $alldemande = $bdd->query('SELECT titre FROM Livres');
+}
+elseif(isset($_GET['genre'])){
+    $genre = htmlspecialchars($_GET['genre']);
+    $alldemande = $bdd->query('SELECT genre FROM Livres');
+}
+elseif(isset($_GET['sortie'])){
+    $sortie = htmlspecialchars($_GET['sortie']);
+    $alldemande = $bdd->query('SELECT sortie FROM Livres');
+}
+elseif(isset($_GET['auteur'])){
+    $auteur = htmlspecialchars($_GET['auteur']);
+    $alldemande = $bdd->query('SELECT auteur FROM Livres');
+}
+else{
+    $alldemande = $bdd->query('SELECT * FROM Livres');
+}
 
 include "vue/vueChercher.php";
 
