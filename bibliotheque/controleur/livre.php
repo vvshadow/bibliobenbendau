@@ -3,9 +3,9 @@
 
 function connexionBDD()
 {
-    $db = 'mysql:host=10.23.216.21;dbname=bibliotheque';
-    $user = 'bibliotheque';
-    $password = 'meSdEkETU2m5i}!';
+    $db = 'mysql:host=10.23.216.213;dbname=dblogin5260';
+    $user = 'login5260';
+    $password = 'rIgUUppFtMTdpFs';
     try {
         $ObjConnexion = new PDO(
             $db,
@@ -35,6 +35,7 @@ if($resultat->num_rows > 0 ){
 };
     
 
+<<<<<<< HEAD
     try {
         $pdf = new HTML2PDF('p','A4','fr');
         $pdf->pdf->SetAuteur($auteur);
@@ -47,3 +48,10 @@ if($resultat->num_rows > 0 ){
         die($e);
     };
     
+=======
+    }else {
+        echo "0 resusltat";
+    }
+
+?>
+>>>>>>> 0d4b3e4d2f615a44cbbbbd6763f90b51d53f723a

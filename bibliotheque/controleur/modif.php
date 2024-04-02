@@ -34,7 +34,18 @@ class livecontroler {
 
    
     public function modifierLivre($idLivre, $nouveauxTitre, $nouveauxAuteur, $nouvelleDateSortie, $nouvelleCotation) {
-       
+            for ($i=0; $i < 5; $i++) {
+               $line = readline("Commande : ");
+                readline_add_history($line);
+        }
+    
+        // Liste l'historique
+        print_r(readline_list_history());
+    
+        // Liste les variables
+        print_r(readline_info());
+
+
         require_once('modele/livreModel.php');
         $resultat= $livreModel::modifierLivre($idLivre, $nouveauxTitre, $nouveauxAuteur, $nouvelleDateSortie, $nouvelleCotation);
        
