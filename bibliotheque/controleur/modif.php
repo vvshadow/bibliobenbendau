@@ -38,7 +38,7 @@ class livecontroler {
                $idLivre = readline("Commande : ");
                $nouveauxTitre = readline("Commande : ");
                $nouveauxAuteur = readline("Commande : ");
-               $nouveauxAuteur = readline("Commande : ");
+               $nouvelleDateSortie= readline("Commande : ");
                $nouvelleCotation = readline("Commande : ");
 
                 readline_add_history($idLivre, $nouveauxTitre, $nouveauxAuteur, $nouvelleDateSortie, $nouvelleCotation);
@@ -49,6 +49,8 @@ class livecontroler {
     
         // Liste les variables
         print_r(readline_info());
+
+        $user = $bdd->prepare("UPDATE INTO livre $idLivre ,Titre $nouveauxTitre, Auteur $nouveauxAuteur , cotation $nouvelleCotation,resume, img, sortie $nouvelleDateSortie) VALUES");
 
 
         /*require_once('modele/livreModel.php');
@@ -64,7 +66,7 @@ class livecontroler {
         }
     }
 }*/
+
 include "/vue/vueModif.php";
     
 ?>
-}

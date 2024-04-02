@@ -46,4 +46,3 @@ if($resultat->num_rows > 0 ){
     } catch (HTML2PDF_exception $e) {
         die($e);
     };
-    
