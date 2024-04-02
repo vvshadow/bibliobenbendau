@@ -28,15 +28,20 @@ class livecontroler {
        
         require_once('vue/header.php');
         require_once('vue/formulaireModificationLivre.php');
-        require_once('vue/footer.php');
+        require_once('/vue/footer.php');
     }
 
 
    
     public function modifierLivre($idLivre, $nouveauxTitre, $nouveauxAuteur, $nouvelleDateSortie, $nouvelleCotation) {
             for ($i=0; $i < 5; $i++) {
-               $line = readline("Commande : ");
-                readline_add_history($line);
+               $idLivre = readline("Commande : ");
+               $nouveauxTitre = readline("Commande : ");
+               $nouveauxAuteur = readline("Commande : ");
+               $nouveauxAuteur = readline("Commande : ");
+               $nouvelleCotation = readline("Commande : ");
+
+                readline_add_history($idLivre, $nouveauxTitre, $nouveauxAuteur, $nouvelleDateSortie, $nouvelleCotation);
         }
     
         // Liste l'historique
@@ -53,7 +58,8 @@ class livecontroler {
            
             header('Location: index.php?messsage=modification_reuussie');
         } else {
-            // Échec de la modification
+            
+
             header('Location: index.php?message=modification_echec');
         }
     }
