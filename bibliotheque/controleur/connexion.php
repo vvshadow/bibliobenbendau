@@ -4,39 +4,36 @@
 session_start();
 include 'mesFonctionsAccesBDD.php';
 
- 
+
 // Partie de traitement des données récupérées si besoin pour mise à disposition de la vue
-if(isset($_POST['formconnect'])) {
+if (isset($_POST['formconnect'])) {
     $mailco = htmlspecialchars($_POST['mailco']);
     $mdpco =    $_POST['mdpco'];
 
-    if(!empty($_POST["mailco"]) AND !empty($_POST["mdpco"]))
-    {
+    if (!empty($_POST["mailco"]) and !empty($_POST["mdpco"])) {
         $requser = $bdd->prepare("SELECT * FROM user WHERE mail = ?");
-        $requser ->bindValue(1, $mailco, PDO::PARAM_STR);
+        $requser->bindValue(1, $mailco, PDO::PARAM_STR);
         $requser->execute();
         $user = $requser->fetch();
 
-        if($user && password_verify($mdpco, $user['mdp'])){
+        if ($user && password_verify($mdpco, $user['mdp'])) {
             $_SESSION['d'] = $user['d'];
             $_SESSION['mail'] = $user['mail'];
             $_SESSION['nom'] = $user['nom'];
 
             header("profil.php");
             exit();
-        }else{
+        } else {
             $erreur = "Identifiants incorrect";
         }
-    }else{
+    } else {
         $erreur = 'Les champs ne sont pas tous compléter';
     }
 }
-if(isset($erreur))
-{
-    echo '<font color="red">' .$erreur."</font>";
+if (isset($erreur)) {
+    echo '<font color="red">' . $erreur . "</font>";
 }
 
 
 // appel du script de vue qui permet de gerer l'affichage des donnees
 include "vue/vueConnexion.php";
-?>

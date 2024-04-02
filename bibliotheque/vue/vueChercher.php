@@ -14,6 +14,10 @@
        <label for="cotation">Cotation</label>
        <input type="number" maxlength="10" name="cotation"><br>
 
+
+       <label for="reference">Reference</label>
+       <input type="number" name="reference"><br>
+
        <input type="submit" value="Rechercher">
 </form>
 

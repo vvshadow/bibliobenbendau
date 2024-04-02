@@ -17,8 +17,6 @@ function connexionBDD()
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
-
-
 };
 
 $requiser = $bdd->prepare('SELECT * FROM Livre');
@@ -58,5 +56,3 @@ $selectAuteur = $donneesAuteur->fetch();
 
 // appel du script de vue qui permet de gerer l'affichage des donnees
 include "vue/vueAccueil.php";
-
-?>

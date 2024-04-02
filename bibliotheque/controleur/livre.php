@@ -35,23 +35,15 @@ if($resultat->num_rows > 0 ){
 };
     
 
-<<<<<<< HEAD
     try {
         $pdf = new HTML2PDF('p','A4','fr');
         $pdf->pdf->SetAuteur($auteur);
         $pdf->pdf->SetTitle($titre);
-        $pdf->pdf->SetSubject($resumee);
-        $pdf->pdf->SetKeywords('HTML2PDF, Devis, PHP');
+        $pdf->pdf->Setresumee($resumee);
+        $pdf->pdf->SetKeywords('HTML2PDF, livre, PHP');
         $pdf->writeHTML($content);
         $pdf->Output('Devis.pdf');
     } catch (HTML2PDF_exception $e) {
         die($e);
     };
     
-=======
-    }else {
-        echo "0 resusltat";
-    }
-
-?>
->>>>>>> 0d4b3e4d2f615a44cbbbbd6763f90b51d53f723a

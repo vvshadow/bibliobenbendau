@@ -17,7 +17,7 @@ function connexionBDD()
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
- //   return $ObjConnexion;
+    //   return $ObjConnexion;
 
 };
 
@@ -27,7 +27,8 @@ function connexionBDD()
 
 
 
-function recherche($bdd, $titre, $genre, $sortie, $auteur, $cotation) {
+function recherche($bdd, $titre, $genre, $sortie, $auteur, $cotation, $reference)
+{
     // Initialisation de la requête SQL
     $sql = "SELECT * FROM livre WHERE ";
 
@@ -50,6 +51,9 @@ function recherche($bdd, $titre, $genre, $sortie, $auteur, $cotation) {
     if (!empty($cotation)) {
         $conditions[] = "cotation = '$cotation'";
     }
+    if (!empty($reference)){
+        $reference[] = "reference = '$reference'";
+    }
 
     // Ajout des conditions a la requete sql
     $sql .= implode(" AND ", $conditions);
@@ -62,14 +66,15 @@ function recherche($bdd, $titre, $genre, $sortie, $auteur, $cotation) {
 }
 
 // Utilisation de la fonction recheche
-if (isset($_GET['titre']) && isset($_GET['genre']) && isset($_GET['sortie']) && isset($_GET['auteur']) && isset($_GET['cotation'])) {
+if (isset($_GET['titre']) && isset($_GET['genre']) && isset($_GET['annesortie']) && isset($_GET['idauteur']) && isset($_GET['cotation']) && isset($_GET['codelivre'])) {
     $tit = htmlspecialchars($_GET['titre']);
     $genre = htmlspecialchars($_GET['genre']);
-    $sortie = htmlspecialchars($_GET['sortie']);
-    $auteur = htmlspecialchars($_GET['auteur']);
+    $sortie = htmlspecialchars($_GET['annesortie']);
+    $auteur = htmlspecialchars($_GET['idauteur']);
     $cotation = htmlspecialchars($_GET['cotation']);
+    $reference = htmlspecialchars($_GET['codelivre']);
 
-    $resultatsRecherche = recherche($bdd, $tit, $genre, $sortie, $auteur);
+    $resultatsRecherche = recherche($bdd, $tit, $genre, $sortie, $auteur, $reference);
 };
 
 /*
@@ -95,7 +100,3 @@ else{
 }
 */
 include "vue/vueChercher.php";
-
-
-
-?>

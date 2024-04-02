@@ -26,9 +26,9 @@ class livecontroler {
         require_once('modele/livreModel.php');
         $livre =  $livremodel :: getLivreById($idLivre);
        
-        require_once('vue/header.php');
-        require_once('vue/formulaireModificationLivre.php');
-        require_once('/vue/footer.php');
+        require_once("vue/header.php");
+        require_once("/vue/formulaireModificationLivre.php");
+        require_once("/vue/footer.php");
     }
 
 
@@ -51,7 +51,7 @@ class livecontroler {
         print_r(readline_info());
 
 
-        require_once('modele/livreModel.php');
+        /*require_once('modele/livreModel.php');
         $resultat= $livreModel::modifierLivre($idLivre, $nouveauxTitre, $nouveauxAuteur, $nouvelleDateSortie, $nouvelleCotation);
        
         if ($resultat) {
@@ -63,7 +63,8 @@ class livecontroler {
             header('Location: index.php?message=modification_echec');
         }
     }
-}
+}*/
 include "/vue/vueModif.php";
-
+    
 ?>
+}
