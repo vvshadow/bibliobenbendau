@@ -1,5 +1,5 @@
 <?php
-include "vue/vueAcceuil.php";
+
 
 function connexionBDD()
 {
@@ -21,20 +21,29 @@ function connexionBDD()
  //   return $ObjConnexion;
 
 };
+$bdd = connexionBDD();
 
-
-$sql = "SELECT auteur, titre , resumee From livres Where id  = '1 '";
+$sql = "SELECT auteur, titre , resumee, pdf From livres Where id  = '1 '";
 $resultat = $conn->query($sql);
 if($resultat->num_rows > 0 ){
     while($row = $resultat -> fetch_assoc()){
-        echo"<p>Auteur: " . $row["auteur"]. "</p>";
+        echo"<p>Auteur: " . $row['auteur']. "</p>";
         echo"<p>Titre :" .$row["titre"]. "</p>";
         echo"<p>Resume :" .$row["resumee"] . "</p>";
+        echo"<p><a href=''>PDF :" .$row["pdf"]."</a></p>
     }
+};
     
 
-    }else {
-        echo "0 resusltat"
-    }
-}
-
+    try {
+        $pdf = new HTML2PDF('p','A4','fr');
+        $pdf->pdf->SetAuteur($auteur);
+        $pdf->pdf->SetTitle($titre);
+        $pdf->pdf->SetSubject($resumee);
+        $pdf->pdf->SetKeywords('HTML2PDF, Devis, PHP');
+        $pdf->writeHTML($content);
+        $pdf->Output('Devis.pdf');
+    } catch (HTML2PDF_exception $e) {
+        die($e);
+    };
+    

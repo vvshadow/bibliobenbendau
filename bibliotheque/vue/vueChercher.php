@@ -11,6 +11,9 @@
        <label for="auteur">Auteur</label>
        <input type="text" name="auteur"><br>
 
+       <label for="cotation">Cotation</label>
+       <input type="number" maxlength="10" name="cotation"><br>
+
        <input type="submit" value="Rechercher">
 </form>
 

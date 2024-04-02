@@ -26,8 +26,8 @@ function connexionBDD()
 //$s = recherche();
 
 
-/*
-function recherche($bdd, $titre, $genre, $sortie, $auteur) {
+
+function recherche($bdd, $titre, $genre, $sortie, $auteur, $cotation) {
     // Initialisation de la requête SQL
     $sql = "SELECT * FROM livre WHERE ";
 
@@ -47,6 +47,9 @@ function recherche($bdd, $titre, $genre, $sortie, $auteur) {
     if (!empty($auteur)) {
         $conditions[] = "auteur = '$auteur'";
     }
+    if (!empty($cotation)) {
+        $conditions[] = "cotation = '$cotation'";
+    }
 
     // Ajout des conditions a la requete sql
     $sql .= implode(" AND ", $conditions);
@@ -59,16 +62,17 @@ function recherche($bdd, $titre, $genre, $sortie, $auteur) {
 }
 
 // Utilisation de la fonction recheche
-if (isset($_GET['titre']) && isset($_GET['genre']) && isset($_GET['sortie']) && isset($_GET['auteur'])) {
+if (isset($_GET['titre']) && isset($_GET['genre']) && isset($_GET['sortie']) && isset($_GET['auteur']) && isset($_GET['cotation'])) {
     $tit = htmlspecialchars($_GET['titre']);
     $genre = htmlspecialchars($_GET['genre']);
     $sortie = htmlspecialchars($_GET['sortie']);
     $auteur = htmlspecialchars($_GET['auteur']);
+    $cotation = htmlspecialchars($_GET['cotation']);
 
     $resultatsRecherche = recherche($bdd, $tit, $genre, $sortie, $auteur);
 };
-*/
 
+/*
 $alldemande = $bdd->query("SELECT * FROM Livres WHERE 1=1");
 if(isset($_GET['titre'])){
     $tit = htmlspecialchars($_GET['titre']);
@@ -89,7 +93,7 @@ elseif(isset($_GET['auteur'])){
 else{
     $alldemande = $bdd->query('SELECT * FROM Livres');
 }
-
+*/
 include "vue/vueChercher.php";
 
 
