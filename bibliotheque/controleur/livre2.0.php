@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livres</title>
-    <link rel="stylesheet" href="#">
-</head>
-<body>
+
     <?php
     session_start();
     $bdd = new PDO("mysql:host=10.23.216.21;dbname=bibliotheque","bibliotheque","meSdEkETU2m5i}!");
@@ -46,6 +38,6 @@
     </table>
     <?php } else{
         header("location : index.php");
-    } ?>
-</body>
-</html>
+    } 
+    include "vue/vueLivre.php";
+    ?>

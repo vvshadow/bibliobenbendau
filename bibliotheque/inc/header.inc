@@ -19,6 +19,7 @@
                 <li><h1><a href="./index.php?action=accueil">Accueil</a></h1>
                 <li><h1><a href="./index.php?action=chercher">Rechercher</a></h1>
                 <li><h1><a href="./index.php?action=contact">Contact</a></h1>
+                <li><h1><a href="./index.php?action=livre">Livres</a></h1>
                 <li><h1><a href="./index.php?action=connexion">Connexion</a></h1>
             </ul>
       </nav>

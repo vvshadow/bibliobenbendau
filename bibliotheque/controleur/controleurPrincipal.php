@@ -8,7 +8,7 @@ function controleurPrincipal($action){
     $lesActions["connexion"] = "connexion.php";
     $lesActions["ajouterLivre"] = "ajouterLivre.php";
     $lesActions["resultsc"] = "resultsc.php";
-    $lesActions["livre"] = "livre.php";
+    $lesActions["livre"] = "livre2.0.php";
     
     
     
